@@ -1,0 +1,13 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  &--transparent {
+    background-color: $color-transparent;
+  }
+}

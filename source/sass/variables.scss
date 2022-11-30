@@ -1,0 +1,44 @@
+// Colors
+// Default
+
+$color-default-black:             #000000;
+$color-default-white:             #ffffff;
+$color-transparent:               rgba(255, 255, 255, 0);
+
+// Base
+
+$color-nero:                      #252525;
+$color-torch-red:                 #e50000;
+$color-tangerine-yellow:          #ffcc00;
+$color-light-grey:                #d7d7d7;
+$color-gainsboro:                 #e2e2e2;
+$color-gainsboro-2:               #d9d9d9;
+
+// Typography
+//---------------------------------
+
+$font-family--roboto:                "Roboto", "Arial", sans-serif;
+$font-family--heliosCond:            "HeliosCond", "Arial", sans-serif;
+
+// Animation
+//---------------------------------
+
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
+
+// Viewports
+//---------------------------------
+
+$vp--320:                           320px;
+$vp--375:                           375px;
+$vp--768:                           768px;
+$vp--1024:                          1024px;
+$vp--1280:                          1280px;
+$vp--1440:                          1440px;
+$vp--1920:                          1920px;
+
+// Retina
+//---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;
