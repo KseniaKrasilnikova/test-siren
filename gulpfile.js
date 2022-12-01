@@ -13,10 +13,15 @@ const svgstore = require('gulp-svgstore');
 const del = require('del');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
+const include = require("posthtml-include");
+const posthtml = require("gulp-posthtml");
 const gcmq = require('gulp-group-css-media-queries');
 
 const html = () => {
   return gulp.src('source/**/*.html', {base: 'source'})
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(gulp.dest('build'))
 };
 
