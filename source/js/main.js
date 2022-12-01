@@ -1,4 +1,4 @@
-import {initBurger} from './modules/init-burger-action';
+// import {initBurger} from './modules/init-burger-action';
 
 // ---------------------------------
 
@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   window.addEventListener('load', () => {
-    initBurger();
+    // initBurger();
   });
 });
 

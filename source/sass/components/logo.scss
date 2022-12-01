@@ -1,0 +1,18 @@
+.logo {
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &_header {
+    width: 166px;
+    height: 39.5px;
+  }
+
+  &_footer {
+    width: 202px;
+    height: 37px;
+  }
+}

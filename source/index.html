@@ -13,13 +13,21 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <div class="visually-hidden">
+    <div class="visuallyHidden">
       <include src="build/img/sprite_auto.svg"></include>
     </div>
     <div class="wrapper">
       <header class="header">
         <div class="container">
-
+          <div class="header__content">
+            <div class="header__logoWrapper logo logo_header">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="img/content/logo-desktop@1x.png 1x, img/content/logo-desktop@2x.png 2x">
+                <img src="img/content/logo-mobile@1x.png" srcset="img/content/logo-mobile@2x.png" alt="Company Logo" width="167" height="40">
+              </picture>
+            </div>
+            <a href="#formEstimateBtn" class="header__link hoverUnderline" aria-label="Link to form">Link to form</a>
+          </div>
         </div>
       </header>
 
@@ -28,8 +36,37 @@
         <svg width="54" height="51" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="#icon-pig"></use>
         </svg>
+        <button id="formEstimateBtn" type="submit">Estimate</button>
       </main>
       <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__logoWrapper logo logo_footer">
+              <picture>
+                <img src="img/content/logo-footer@1x.png" srcset="img/content/logo-footer@2x.png" alt="Company Logo" width="203" height="30">
+              </picture>
+            </div>
+            <div class="footer__linksWrapper">
+              <ul class="footer__list">
+                <li class="footer__listItem">
+                  <a class="footer__link hoverUnderline" href="#" aria-label="Terms of Use">Terms of Use</a>
+                </li>
+                <li class="footer__listItem">
+                  <a class="footer__link hoverUnderline" href="#" aria-label="Privacy Policy">Privacy Policy</a>
+                </li>
+                <li class="footer__listItem">
+                  <a class="footer__link hoverUnderline" href="#" aria-label="Cookie Policy">Cookie Policy</a>
+                </li>
+                <li class="footer__listItem">
+                  <a class="footer__link hoverUnderline" href="#" aria-label="Do Not Sell My Personal Information">Do Not Sell My Personal Information</a>
+                </li>
+                <li class="footer__listItem">
+                  <a class="footer__link hoverUnderline" href="#" aria-label="Contact us">Contact us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
 
