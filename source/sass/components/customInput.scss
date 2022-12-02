@@ -1,0 +1,106 @@
+.customInput {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    flex-grow: 1;
+    min-height: 56px;
+    background-color: #bb0000;
+    padding: 6px 0;
+
+    font-size: 18px;
+    line-height: 21px;
+
+    outline: none;
+
+    transition: background-color $trans-default, border $trans-default;
+  }
+
+  input::placeholder {
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-dim-gray;
+  }
+
+  &__error {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+
+    font-size: 12px;
+    line-height: 15px;
+
+    color: $color-free-speech-red;
+
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  &.isInvalid {
+    .customInput__error {
+      opacity: 1;
+    }
+
+    .customInput__span {
+      color: $color-free-speech-red;
+    }
+  }
+
+  &_label-visible {
+    label {
+      position: absolute;
+      top: 20px;
+      left: 15px;
+
+      pointer-events: none;
+      font-size: 14px;
+      line-height: 17px;
+      color: $color-nero;
+    }
+
+    input {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &_focusShift {
+    input {
+      font-size: 16px;
+      line-height: 32px;
+
+      padding: 8px 16px 4px;
+    }
+
+    &:focus-within label {
+      transform: scale(0.75) translate(-16.6%, -27px);
+    }
+
+    &.isInvalid:focus-within .customInput__span {
+      opacity: 0;
+    }
+  }
+
+  &_bgLight {
+    input {
+      background-color: $color-ghost-white;
+      border-radius: 4px;
+      border: 1px solid $color-transparent;
+
+      &:focus {
+        border: 1px solid $color-royal-blue;
+      }
+    }
+  }
+}

@@ -75,6 +75,10 @@
 .advantages__rating {
   display: contents;
   fill: none;
+
+  svg {
+    flex-shrink: 0;
+  }
 }
 
 .advantages__text {

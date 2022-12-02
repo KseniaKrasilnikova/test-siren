@@ -1,0 +1,34 @@
+.formZipCode {
+  padding: 25px 16px 16px;
+
+  @include vp-1024 {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 48px 0 41px;
+  }
+}
+
+.formZipCode__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  text-align: center;
+  font-size: 23px;
+  line-height: 32px;
+}
+
+.formZipCode__secondaryText {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: $color-dim-gray;
+}
+
+.formZipCode__btn {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.formZipCode__input {
+  margin-bottom: 7px;
+}

@@ -7,7 +7,32 @@
   cursor: pointer;
   outline: none;
 
-  &--transparent {
-    background-color: $color-transparent;
+  &_accented {
+    padding: 16px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-default-white;
+    text-align: center;
+
+    background-color: $color-carrot-orange;
+    border-radius: 4px;
+    transition: background-color $trans-default;
+
+    @media (hover: hover), screen and (min-width: $vp--1024) {
+      &:hover,
+      &:focus {
+        background-color: $color-mango-tango-1;
+      }
+
+      &:active {
+        background-color: $color-mango-tango-2;
+      }
+
+      &:disabled {
+        background-color: $color-peach-orange;
+      }
+    }
   }
 }
