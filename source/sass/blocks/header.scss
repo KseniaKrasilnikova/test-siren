@@ -10,6 +10,10 @@
   flex-wrap: nowrap;
   align-items: center;
   padding: 8px 0;
+
+  @include vp-1024 {
+    padding: 16px 0;
+  }
 }
 
 .header__link {
@@ -22,6 +26,7 @@
   color: $color-default-white;
 
   @include vp-1024 {
+    padding-bottom: 14px;
     line-height: 20px;
   }
 }

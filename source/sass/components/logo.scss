@@ -9,6 +9,11 @@
   &_header {
     width: 166px;
     height: 39.5px;
+
+    @include vp-1024 {
+      width: 207px;
+      height: 49.5px;
+    }
   }
 
   &_footer {
