@@ -9,6 +9,8 @@
     display: flex;
     align-items: center;
     width: 100%;
+
+    transition: color $trans-default;
   }
 
   input,
@@ -22,6 +24,7 @@
     line-height: 21px;
 
     outline: none;
+    border: 1px solid $color-transparent;
 
     transition: background-color $trans-default, border $trans-default;
   }
@@ -32,14 +35,17 @@
     color: $color-dim-gray;
   }
 
+  input:disabled + label {
+    color: $color-dim-gray;
+  }
+
   &__error {
     position: absolute;
     bottom: 0;
-    left: 5px;
+    left: 15px;
 
     font-size: 12px;
     line-height: 15px;
-
     color: $color-free-speech-red;
 
     opacity: 0;
@@ -63,8 +69,8 @@
       left: 15px;
 
       pointer-events: none;
-      font-size: 14px;
-      line-height: 17px;
+      font-size: 11px;
+      line-height: 13px;
       color: $color-nero;
     }
 
@@ -77,14 +83,20 @@
 
   &_focusShift {
     input {
-      font-size: 16px;
-      line-height: 32px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
 
       padding: 8px 16px 4px;
     }
 
     &:focus-within label {
-      transform: scale(0.75) translate(-16.6%, -27px);
+      transform: scale(1) translate(0.2%,-15.5px);
+      color: $color-royal-blue;
+    }
+
+    &.isInvalid label {
+      transform: scale(1) translate(0.2%, -15.5px);
     }
 
     &.isInvalid:focus-within .customInput__span {
@@ -97,10 +109,27 @@
       background-color: $color-ghost-white;
       border-radius: 4px;
       border: 1px solid $color-transparent;
+    }
 
-      &:focus {
-        border: 1px solid $color-royal-blue;
+    &:hover,
+    &:focus {
+      input {
+        border: 1px solid $color-cornflower-blue;
+      }
+
+      label {
+        color: $color-royal-blue;
       }
     }
+
+    &.isInvalid {
+      input {
+        border-color: #bb0000;
+      }
+    }
+  }
+
+  &.js-has-value label {
+    transform: scale(1) translate(0.2%, -15.5px);
   }
 }
