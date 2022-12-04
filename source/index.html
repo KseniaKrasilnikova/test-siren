@@ -181,13 +181,12 @@
             </div>
               <div class="container">
                 <form class="formOwner" action="/" method="POST">
-
                   <div class="formOwner__step formOwner__step_1">
                     <div class="formOwner__title">
                       <h2>Are you homeowner or authorized to make property changes?</h2>
                     </div>
                     <div class="formOwner__options">
-                      <button class="button button_bordered button_option" type="button">
+                      <button class="formOwner__option button button_bordered button_option" type="button">
                         <span class="icon">
                           <svg width="40" height="40" aria-hidden="true">
                             <use xlink:href="#icon-check-true"></use>
@@ -195,7 +194,7 @@
                         </span>
                         <span class="text">Yes</span>
                       </button>
-                      <button class="button button_bordered button_option" type="button">
+                      <button class="formOwner__option button button_bordered button_option" type="button">
                         <span class="icon">
                           <svg width="40" height="40" aria-hidden="true">
                             <use xlink:href="#icon-check-false"></use>
@@ -216,8 +215,16 @@
                       </div>
                     </div>
                     <div class="formOwner__inputs">
-
-
+                      <div class="formOwner__input customInput customInput_label-visible customInput_focusShift customInput_bgLight js-focus-shift" data-validate-type="text">
+                        <input type="text" id="userName" name="userName" required>
+                        <label for="userName"><span class="customInput__span">Full name</span></label>
+                        <div class="customInput__error">Error message</div>
+                      </div>
+                      <div class="formOwner__input customInput customInput_label-visible customInput_focusShift customInput_bgLight js-focus-shift" data-validate-type="email">
+                        <input type="email" id="userEmail" name="userName" required>
+                        <label for="userEmail"><span class="customInput__span">Email address</span></label>
+                        <div class="customInput__error">Error message</div>
+                      </div>
                     </div>
                     <button class="modalEstimation__btnNext formOwner__btn button button_accented" type="submit" data-confirmation>Next</button>
                     <div class="formOwner__privacy">
@@ -229,11 +236,8 @@
                       <span>Safe, Secure and Confidential</span>
                     </div>
                   </div>
-
                 </form>
               </div>
-
-
           </div>
           <button class="modal__close-btn button button_transparent" type="button" aria-label="Закрыть окно" data-close-modal>
             <svg width="22" height="22" aria-hidden="true">

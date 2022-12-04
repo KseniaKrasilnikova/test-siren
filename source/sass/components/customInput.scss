@@ -65,12 +65,10 @@
   &_label-visible {
     label {
       position: absolute;
-      top: 20px;
-      left: 15px;
+      top: 18.6px;
+      left: 17px;
 
       pointer-events: none;
-      font-size: 11px;
-      line-height: 13px;
       color: $color-nero;
     }
 
@@ -91,12 +89,12 @@
     }
 
     &:focus-within label {
-      transform: scale(1) translate(0.2%,-15.5px);
+      transform: scale(0.78) translate(-13.6%,-25.5px);
       color: $color-royal-blue;
     }
 
     &.isInvalid label {
-      transform: scale(1) translate(0.2%, -15.5px);
+      transform: scale(0.78) translate(-13.6%,-25.5px);
     }
 
     &.isInvalid:focus-within .customInput__span {
@@ -130,6 +128,6 @@
   }
 
   &.js-has-value label {
-    transform: scale(1) translate(0.2%, -15.5px);
+    transform: scale(0.78) translate(-13.6%,-25.5px);
   }
 }

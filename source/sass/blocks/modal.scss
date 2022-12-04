@@ -9,8 +9,8 @@
 
 .modal__close-btn  {
   position: absolute;
-  top: 24px;
-  right: 40px;
+  top: 15px;
+  right: 16px;
   z-index: 1;
 
   width: 24px;
@@ -20,4 +20,9 @@
   background: $color-transparent;
   border: none;
   cursor: pointer;
+
+  @include vp-1024 {
+    top: 24px;
+    right: 40px;
+  }
 }

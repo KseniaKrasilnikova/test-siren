@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100%;
 
-  padding-top: 65px;
+  padding-top: 55.5px;
 
   @include vp-1024 {
     padding-top: 72px;
@@ -12,9 +12,10 @@
 
 .modalEstimation__btnNext {
   width: 100%;
+  margin-bottom: 16px;
 
   @include vp-1024 {
     max-width: 87px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
 }
