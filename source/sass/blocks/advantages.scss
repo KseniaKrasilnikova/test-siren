@@ -23,7 +23,6 @@
 .advantages__listItem {
   display: flex;
   flex-wrap: nowrap;
-  grid-column-gap: 16px;
   align-items: center;
 
   font-weight: 500;
@@ -49,6 +48,7 @@
   flex-shrink: 0;
   width: 64px;
   height: 64px;
+  margin-right: 16px;
 
   @include vp-1024 {
     width: 72px;
@@ -64,7 +64,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  column-gap: 4px;
 
   @include vp-1024 {
     flex-direction: column;
@@ -73,8 +72,9 @@
 }
 
 .advantages__rating {
-  display: contents;
+  display: flex;
   fill: none;
+  margin-right: 4px;
 
   svg {
     flex-shrink: 0;

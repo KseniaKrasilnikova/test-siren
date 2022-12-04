@@ -14,7 +14,6 @@ const initInputWrappers = () => {
   inputWrappers.forEach((inputWrapper) => {
     const input = inputWrapper.querySelector('input') || inputWrapper.querySelector('textarea');
     input.addEventListener('input', () => {
-      console.log("input = " + input.value)
       invalidateInput(inputWrapper, input.value);
     });
   });

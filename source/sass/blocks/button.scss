@@ -5,7 +5,6 @@
 
   border: none;
   cursor: pointer;
-  outline: none;
 
   &_accented {
     padding: 16px;
@@ -19,6 +18,7 @@
     background-color: $color-carrot-orange;
     border-radius: 4px;
     transition: background-color $trans-default;
+    outline: none;
 
     @media (hover: hover), screen and (min-width: $vp--1024) {
       &:hover,
@@ -66,6 +66,8 @@
     margin-bottom: 8px;
     padding: 14px 22px;
 
+    transition: border-color $trans-default;
+
     .icon {
       width: 40px;
       height: 40px;
@@ -95,6 +97,16 @@
         width: 57px;
         height: 57px;
       }
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        border-color: $color-carrot-orange;
+      }
+    }
+
+    &.selected {
+      border-color: $color-carrot-orange;
     }
   }
 }

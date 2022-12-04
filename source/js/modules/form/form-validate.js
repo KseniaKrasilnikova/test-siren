@@ -625,7 +625,6 @@ export default class FormsValidate {
     const resetButtons = form.querySelectorAll('button[type="reset"], [data-reset], a[type="reset"]');
     form.noValidate = true;
     form.addEventListener('submit', (e) => {
-      console.log("submit")
       onFormSubmit(e, this.callback);
     });
     if (resetButtons.length) {

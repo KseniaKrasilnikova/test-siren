@@ -175,11 +175,11 @@
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
           <div class="modalEstimation" data-validate>
-            <div class="modalEstimation__progressBar progressBar">
-              <span class="progressBar__block progressBar__block_done"></span>
+            <div class="modalEstimation__progressBar progressBar" data-steps-bar>
+              <span class="progressBar__block done"></span>
               <span class="progressBar__block"></span>
             </div>
-              <div class="container">
+              <div class="container" data-form-validate data-callback="finish">
                 <form class="formOwner" action="/" method="POST">
                   <div class="formOwner__step formOwner__step_1" data-step>
                     <div class="formOwner__title">
@@ -203,18 +203,18 @@
                         <span class="text">No</span>
                       </button>
                     </div>
-                    <button class="modalEstimation__btnNext formOwner__btn button button_accented" type="submit" data-next-step>Next</button>
+                    <div class="modalEstimation__btnNext formOwner__btn button button_accented" data-next-step tabindex="0">Next</div>
                   </div>
                   <div class="formOwner__step formOwner__step_2 visuallyHidden" data-step>
                     <div class="formOwner__title">
                       <h2>Who should I prepare this estimate for?</h2>
                       <div class="formOwner__comment">
                         <span>Your choice:&nbsp;</span>
-                        <span class="formOwner__commentChoice js-previous-step-choice">Yes</span>
+                        <span class="formOwner__commentChoice js-previous-step-choice"></span>
                       </div>
                     </div>
                     <div class="formOwner__inputs">
-                      <div class="formOwner__input customInput customInput_label-visible customInput_focusShift customInput_bgLight js-focus-shift" data-validate-type="text">
+                      <div class="formOwner__input customInput customInput_label-visible customInput_focusShift customInput_bgLight js-focus-shift" data-validate-type="text" data-limitations="letters">
                         <input type="text" id="userName" name="userName" required>
                         <label for="userName"><span class="customInput__span">Full name</span></label>
                         <div class="customInput__error">Error message</div>
@@ -225,7 +225,7 @@
                         <div class="customInput__error">Error message</div>
                       </div>
                     </div>
-                    <button class="modalEstimation__btnNext formOwner__btn button button_accented" type="submit" data-confirmation>Next</button>
+                    <button class="modalEstimation__btnNext formOwner__btn button button_accented" type="submit">Next</button>
                     <div class="formOwner__privacy">
                       <span class="formOwner__privacyIcon">
                         <svg width="11" height="13" aria-hidden="true">
@@ -238,7 +238,7 @@
                 </form>
               </div>
           </div>
-          <button class="modal__close-btn button button_transparent" type="button" aria-label="Закрыть окно" data-close-modal>
+          <button class="modal__close-btn button button_transparent" type="reset" aria-label="Закрыть окно" data-close-modal >
             <svg width="22" height="22" aria-hidden="true">
               <use xlink:href="#icon-close"></use>
             </svg>

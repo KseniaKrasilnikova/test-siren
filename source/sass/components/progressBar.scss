@@ -15,7 +15,7 @@
 
   background-color: $color-ghost-white;
 
-  &_done {
+  &.done {
     background-color: $color-kelly-green;
   }
 }
