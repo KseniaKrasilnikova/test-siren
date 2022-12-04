@@ -10,6 +10,7 @@
     align-items: center;
     width: 100%;
 
+    transform: translateZ(0);
     transition: color $trans-default;
   }
 
@@ -25,7 +26,9 @@
 
     outline: none;
     border: 1px solid $color-transparent;
+    -webkit-appearance: none;
 
+    transform: translateZ(0);
     transition: background-color $trans-default, border $trans-default;
   }
 
@@ -49,6 +52,7 @@
     color: $color-free-speech-red;
 
     opacity: 0;
+    transform: translateZ(0);
     transition: opacity $trans-default;
   }
 
@@ -89,12 +93,12 @@
     }
 
     &:focus-within label {
-      transform: scale(0.78) translate(-13.6%,-25.5px);
+      transform: scale(0.78) translate(-13.6%, -25.5px);
       color: $color-royal-blue;
     }
 
     &.is-invalid label {
-      transform: scale(0.78) translate(-13.6%,-25.5px);
+      transform: scale(0.78) translate(-13.6%, -25.5px);
     }
 
     &.is-invalid:focus-within .customInput__span {
@@ -128,6 +132,6 @@
   }
 
   &.js-has-value label {
-    transform: scale(0.78) translate(-13.6%,-25.5px);
+    transform: scale(0.78) translate(-13.6%, -25.5px);
   }
 }

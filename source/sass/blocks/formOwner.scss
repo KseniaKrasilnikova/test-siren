@@ -90,7 +90,6 @@
 .formOwner__privacy {
   display: flex;
   align-items: center;
-  column-gap: 9px;
 
   font-weight: 500;
   font-size: 14px;
@@ -111,6 +110,7 @@
   flex-shrink: 0;
   width: 17px;
   height: 17px;
+  margin-right: 9px;
   padding: 1.6px 3.2px;
 
   svg {

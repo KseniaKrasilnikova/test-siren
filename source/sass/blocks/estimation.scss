@@ -31,7 +31,6 @@
 .estimation__offer {
   display: flex;
   flex-wrap: nowrap;
-  column-gap: 10px;
   padding: 7px 9px 6px;
   margin: 0 24px 24px;
 
@@ -65,6 +64,7 @@
   width: 21px;
   height: 22px;
   flex-shrink: 0;
+  margin-right: 10px;
 
   svg {
     width: 100%;
