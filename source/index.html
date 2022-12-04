@@ -126,15 +126,12 @@
                 <form class="formZipCode" action="#" method="get">
                   <p class="formZipCode__title">What is your ZIP Code?</p>
                   <div class="formZipCode__input customInput customInput_label-visible customInput_focusShift customInput_bgLight js-focus-shift" data-validate-type="number">
-                    <input type="number" id="zipCode" name="userZipCode">
+                    <input type="number" id="zipCode" name="userZipCode" required>
                     <label for="zipCode"><span class="customInput__span">Enter ZIP Code</span></label>
                     <div class="customInput__error">Error message</div>
-
                   </div>
-
                   <p class="formZipCode__secondaryText">Free, no-obligation estimates.</p>
-                  <button id="formEstimateBtn" class="formZipCode__btn button button_accented" type="submit">Get estimate</button>
-
+                  <button id="formEstimateBtn" class="formZipCode__btn button button_accented js-modal-estimate" type="submit">Get estimate</button>
                 </form>
               </div>
             </div>
@@ -173,7 +170,80 @@
       </footer>
     </div>
 
-    <div class="modal"></div>
+    <div class="modal modal_estimation" data-modal="estimation">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modalEstimation" data-validate>
+            <div class="modalEstimation__progressBar progressBar">
+              <span class="progressBar__block progressBar__block_done"></span>
+              <span class="progressBar__block"></span>
+            </div>
+              <div class="container">
+                <form class="formOwner" action="/" method="POST">
+
+                  <div class="formOwner__step formOwner__step_1">
+                    <div class="formOwner__title">
+                      <h2>Are you homeowner or authorized to make property changes?</h2>
+                    </div>
+                    <div class="formOwner__options">
+                      <button class="button button_bordered button_option" type="button">
+                        <span class="icon">
+                          <svg width="40" height="40" aria-hidden="true">
+                            <use xlink:href="#icon-check-true"></use>
+                          </svg>
+                        </span>
+                        <span class="text">Yes</span>
+                      </button>
+                      <button class="button button_bordered button_option" type="button">
+                        <span class="icon">
+                          <svg width="40" height="40" aria-hidden="true">
+                            <use xlink:href="#icon-check-false"></use>
+                          </svg>
+                        </span>
+                        <span class="text">No</span>
+                      </button>
+                    </div>
+                    <button class="modalEstimation__btnNext formOwner__btn button button_accented" type="submit" data-confirmation>Next</button>
+                  </div>
+
+                  <div class="formOwner__step formOwner__step_2">
+                    <div class="formOwner__title">
+                      <h2>Who should I prepare this estimate for?</h2>
+                      <div class="formOwner__comment">
+                        <span>Your choice:&nbsp;</span>
+                        <span class="formOwner__commentChoice js-previous-step-choice">Yes</span>
+                      </div>
+                    </div>
+                    <div class="formOwner__inputs">
+
+
+                    </div>
+                    <button class="modalEstimation__btnNext formOwner__btn button button_accented" type="submit" data-confirmation>Next</button>
+                    <div class="formOwner__privacy">
+                      <span class="formOwner__privacyIcon">
+                        <svg width="11" height="13" aria-hidden="true">
+                          <use xlink:href="#icon-lock"></use>
+                        </svg>
+                      </span>
+                      <span>Safe, Secure and Confidential</span>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+
+
+          </div>
+          <button class="modal__close-btn button button_transparent" type="button" aria-label="Закрыть окно" data-close-modal>
+            <svg width="22" height="22" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

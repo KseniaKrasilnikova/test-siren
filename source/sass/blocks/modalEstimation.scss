@@ -1,0 +1,20 @@
+.modalEstimation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  padding-top: 65px;
+
+  @include vp-1024 {
+    padding-top: 72px;
+  }
+}
+
+.modalEstimation__btnNext {
+  width: 100%;
+
+  @include vp-1024 {
+    max-width: 87px;
+    margin-bottom: 8px;
+  }
+}

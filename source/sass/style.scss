@@ -18,12 +18,16 @@
 @import "blocks/button";
 @import "blocks/advantages";
 @import "blocks/estimation";
+@import "blocks/modalEstimation";
 @import "blocks/footer";
 @import "blocks/header";
+@import "blocks/formOwner";
 @import "blocks/formZipCode";
+@import "blocks/modal";
 @import "blocks/offer";
 
 // Components
 //---------------------------------
 @import "components/customInput";
 @import "components/logo";
+@import "components/progressBar";

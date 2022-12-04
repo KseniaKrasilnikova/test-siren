@@ -1,0 +1,21 @@
+.progressBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-bottom: 24px;
+
+  @include vp-1024 {
+    margin-bottom: 96px;
+  }
+}
+
+.progressBar__block {
+  height: 4px;
+  width: 100%;
+
+  background-color: $color-ghost-white;
+
+  &_done {
+    background-color: $color-kelly-green;
+  }
+}

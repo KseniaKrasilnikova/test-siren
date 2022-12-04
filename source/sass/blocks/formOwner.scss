@@ -1,0 +1,106 @@
+.formOwner {
+  h2 {
+    margin: 0;
+
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 36px;
+    text-align: center;
+    color: $color-nero;
+  }
+
+  @include vp-1024 {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.formOwner__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.formOwner__step {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+
+  &_1 {
+    display: none;
+  }
+}
+
+.formOwner__options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+
+  @include vp-1024 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.formOwner__inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 8px;
+
+  @include vp-1024 {
+    margin-bottom: 16px;
+  }
+}
+
+.formOwner__comment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  color: $color-dim-gray;
+}
+
+.formOwner__commentChoice {
+  font-weight: 700;
+}
+
+.formOwner__privacy {
+  display: flex;
+  align-items: center;
+  column-gap: 11.3px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  text-align: center;
+  color: $color-dim-gray;
+
+  @include vp-1024 {
+    column-gap: 8px;
+  }
+}
+
+.formOwner__privacyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}

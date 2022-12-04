@@ -35,4 +35,66 @@
       }
     }
   }
+
+  &_transparent {
+    background-color: $color-transparent;
+    border: none;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover svg,
+      &:focus svg {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &_bordered {
+    background-color: $color-default-white;
+    border: 2px solid $color-ghost-white;
+    border-radius: 8px;
+
+    @include vp-1024 {
+      border-radius: 16px;
+    }
+  }
+
+  &_option {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 16px;
+    margin-bottom: 8px;
+    padding: 16px 24px;
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      fill: transparent;
+    }
+
+    .icon svg {
+      width: 100%;
+      height: 100%;
+      color: $color-carrot-orange;
+    }
+
+    .text {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include vp-1024 {
+      padding: 21px;
+      flex-direction: column;
+      row-gap: 16px;
+      width: 168px;
+      height: 140px;
+
+      .icon {
+        width: 57px;
+        height: 57px;
+      }
+    }
+  }
 }

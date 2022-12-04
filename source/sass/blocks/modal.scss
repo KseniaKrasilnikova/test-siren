@@ -1,0 +1,23 @@
+.modal {
+
+}
+
+.modal__content {
+  position: relative;
+  width: 100%;
+}
+
+.modal__close-btn  {
+  position: absolute;
+  top: 24px;
+  right: 40px;
+  z-index: 1;
+
+  width: 24px;
+  height: 24px;
+  padding: 0;
+
+  background: $color-transparent;
+  border: none;
+  cursor: pointer;
+}
