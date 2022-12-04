@@ -52,7 +52,7 @@
     transition: opacity $trans-default;
   }
 
-  &.isInvalid {
+  &.is-invalid {
     .customInput__error {
       opacity: 1;
     }
@@ -93,11 +93,11 @@
       color: $color-royal-blue;
     }
 
-    &.isInvalid label {
+    &.is-invalid label {
       transform: scale(0.78) translate(-13.6%,-25.5px);
     }
 
-    &.isInvalid:focus-within .customInput__span {
+    &.is-invalid:focus-within .customInput__span {
       opacity: 0;
     }
   }
@@ -120,7 +120,7 @@
       }
     }
 
-    &.isInvalid {
+    &.is-invalid {
       input {
         border-color: #bb0000;
       }

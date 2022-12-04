@@ -31,6 +31,7 @@ $ff--open-sans:           "Open Sans", "Arial", sans-serif;
 
 $tf-default: ease;
 $trans-default: 0.3s $tf-default;
+$trans-modal: 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 
 // Viewports
 //---------------------------------

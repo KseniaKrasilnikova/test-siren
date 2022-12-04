@@ -1,5 +1,7 @@
-// import {initFormValidate} from './modules/form/init-form-validate';
+import {initFormValidate} from './modules/form/init-form-validate';
 import {initInputWrappers} from './modules/form/init-label-top';
+import {initModals} from './modules/modals/init-modals';
+import {initFormSteps} from './modules/modals/init-form-steps';
 
 // ---------------------------------
 
@@ -11,8 +13,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   window.addEventListener('load', () => {
-    // initFormValidate();
+    initFormValidate();
     initInputWrappers();
+    initModals();
+    initFormSteps();
   });
 });
 

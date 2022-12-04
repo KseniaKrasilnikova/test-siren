@@ -2,9 +2,8 @@
 
 const inputWrappers = document.querySelectorAll('.js-focus-shift');
 
-const validateInput = (inputWrapper) => {
-  const input = inputWrapper.querySelector('input') || inputWrapper.querySelector('textarea');
-  if (input.value) {
+const invalidateInput = (inputWrapper, value) => {
+  if (value) {
     inputWrapper.classList.add('js-has-value');
   } else {
     inputWrapper.classList.remove('js-has-value');
@@ -13,10 +12,12 @@ const validateInput = (inputWrapper) => {
 
 const initInputWrappers = () => {
   inputWrappers.forEach((inputWrapper) => {
-    inputWrapper.addEventListener('input', () => {
-      validateInput(inputWrapper);
+    const input = inputWrapper.querySelector('input') || inputWrapper.querySelector('textarea');
+    input.addEventListener('input', () => {
+      console.log("input = " + input.value)
+      invalidateInput(inputWrapper, input.value);
     });
   });
 };
 
-export {initInputWrappers};
+export {initInputWrappers, invalidateInput};
