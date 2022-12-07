@@ -1,22 +1,23 @@
 .formOwner {
-  h2 {
-    margin: 0;
-
-    font-weight: 700;
-    font-size: 23px;
-    line-height: 32px;
-    text-align: center;
-    color: $color-nero;
-  }
-
   @include vp-1024 {
     max-width: 800px;
     margin: 0 auto;
+  }
+}
 
-    h2 {
-      font-size: 25px;
-      line-height: 36px;
-    }
+.formOwner__titleLg {
+  margin-top: 0;
+  margin-bottom: 7px;
+
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 32px;
+  text-align: center;
+  color: $color-nero;
+
+  @include vp-1024 {
+    font-size: 25px;
+    line-height: 36px;
   }
 }
 
@@ -24,12 +25,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 16px;
-  row-gap: 8px;
+  margin-bottom: 10px;
 
   @include vp-1024 {
-    row-gap: 4px;
     margin-bottom: 24px;
+  }
+
+  &_mbLg {
+    margin-bottom: 16px;
   }
 }
 
@@ -50,7 +53,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 16px;
     margin-bottom: 16px;
   }
 }
@@ -98,7 +100,6 @@
   color: $color-dim-gray;
 
   @include vp-1024 {
-    column-gap: 8px;
     max-width: 250px;
   }
 }

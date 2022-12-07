@@ -7,29 +7,45 @@
   }
 }
 
+.estimation__contentWrapper {
+  background-color: $color-royal-blue;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
 .estimation__content {
   display: flex;
   flex-direction: column;
   padding: 24px 24.5px;
 
-  background-color: $color-royal-blue;
-  border-radius: 24px;
-
-  @media (min-width: $vp--1024) {
-    background-image: url("../img/content/house-desktop@1x.png");
-    background-repeat: no-repeat;
-    background-size: 1171px;
-    background-position-y: 0;
-    background-position-x: 0;
-  }
-
   @include vp-1024 {
-    padding: 120px 96px 71px;
+    position: relative;
+    padding: 63px 96px 71px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: url("../img/content/house-desktop@1x.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-blend-mode: overlay;
+      background-position-y: 0;
+      background-position-x: 0;
+      opacity: 20%;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/content/house-desktop@2x.png");
+      }
+    }
   }
 }
 
 .estimation__offer {
-  display: flex;
+  position: relative;
   flex-wrap: nowrap;
   padding: 7px 9px 6px;
   margin: 0 24px 24px;
@@ -40,7 +56,6 @@
   color: $color-oxford-blue;
 
   background: $color-ghost-white;
-  border: 1px solid $color-carrot-orange;
   border-radius: 8px;
 
   @include vp-768 {
@@ -50,13 +65,10 @@
 
   @include vp-1024 {
     padding: 8px 9px;
-    transform: translateX(-50%);
-    position: absolute;
-    top: 63px;
-    left: 50%;
-    z-index: 1;
-    margin: 0;
-    border: none;
+  }
+
+  &_bordered {
+    border: 1px solid $color-carrot-orange;
   }
 }
 
@@ -74,9 +86,14 @@
 
 .estimation__offerText {
   margin: 0;
+
+  @include vp-1024 {
+    max-width: 500px;
+  }
 }
 
 .estimation__title {
+  position: relative;
   margin-top: 0;
   margin-bottom: 16px;
 
@@ -95,6 +112,7 @@
 }
 
 .estimation__form {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;

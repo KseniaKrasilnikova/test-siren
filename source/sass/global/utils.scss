@@ -73,3 +73,19 @@
   background-color: $color-kelly-green;
   border-radius: 4px;
 }
+
+.onDesktop {
+  display: none;
+
+  @include vp-1024 {
+    display: flex;
+  }
+}
+
+.onMobile {
+  display: flex;
+
+  @include vp-1024 {
+    display: none;
+  }
+}

@@ -72,6 +72,10 @@
       height: 40px;
       fill: transparent;
       margin-right: 16px;
+
+      @include vp-1024 {
+        margin: 0;
+      }
     }
 
     .icon svg {
@@ -89,13 +93,17 @@
     @include vp-1024 {
       padding: 21px;
       flex-direction: column;
-      row-gap: 16px;
       width: 168px;
       height: 140px;
 
       .icon {
         width: 57px;
         height: 57px;
+        margin-bottom: 16px;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 16px;
       }
     }
 

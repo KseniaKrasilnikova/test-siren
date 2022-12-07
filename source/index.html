@@ -21,12 +21,14 @@
         <div class="container">
           <div class="header__content">
             <div class="header__logoWrapper logo logo_header">
-              <picture>
+              <a class="logo__link" href="#" aria-label="Go to the main page">
+                <picture>
                 <source type="image/webp" media="(min-width: 1024px)" srcset="img/content/logo-desktop@1x.webp 1x, img/content/logo-desktop@2x.webp 2x">
                 <source type="image/webp" srcset="img/content/logo-mobile@1x.webp 1x, img/content/logo-mobile@2x.webp 2x">
                 <source media="(min-width: 1024px)" srcset="img/content/logo-desktop@1x.png 1x, img/content/logo-desktop@2x.png 2x">
                 <img src="img/content/logo-mobile@1x.png" srcset="img/content/logo-mobile@2x.png" alt="Company Logo" width="167" height="40">
               </picture>
+              </a>
             </div>
             <a href="#formEstimateBtn" class="header__link hoverUnderline" aria-label="Link to form">Link to form</a>
           </div>
@@ -116,7 +118,7 @@
         </section>
         <section class="estimation">
           <div class="container container_noMobile">
-            <div class="estimation__offer">
+            <div class="estimation__offer estimation__offer_bordered onMobile">
               <div class="estimation__offerIcon">
                 <svg width="21" height="19" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="#icon-pig-filled"></use>
@@ -124,20 +126,31 @@
               </div>
               <p class="estimation__offerText">You will be surprised how affordable gutter guards are!</p>
             </div>
-            <div class="estimation__content">
-              <h2 class="visuallyHidden">Gutter guards cost</h2>
-              <p class="estimation__title">See How Much Gutter Guards Cost In The XX, XXX Area</p>
-              <div class="estimation__form" data-form-validate>
-                <form class="formZipCode" action="#" method="POST">
-                  <p class="formZipCode__title">What is your ZIP Code?</p>
-                  <div class="formZipCode__input customInput customInput_label-visible customInput_focusShift customInput_bgLight js-focus-shift" data-validate-type="text" data-limitations="digit">
-                    <input id="zipCode" name="userZipCode" >
-                    <label for="zipCode"><span class="customInput__span">Enter ZIP Code</span></label>
-                    <div class="customInput__error">Error message</div>
+
+            <div class="estimation__contentWrapper">
+              <div class="estimation__content">
+                <h2 class="visuallyHidden">Gutter guards cost</h2>
+                <div class="estimation__offer onDesktop">
+                  <div class="estimation__offerIcon">
+                    <svg width="21" height="19" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="#icon-pig-filled"></use>
+                    </svg>
                   </div>
-                  <p class="formZipCode__secondaryText">Free, no-obligation estimates.</p>
-                  <button id="formEstimateBtn" class="formZipCode__btn button button_accented js-modal-estimate" type="submit">Get estimate</button>
-                </form>
+                  <p class="estimation__offerText">You will be surprised how affordable gutter guards are!</p>
+                </div>
+                <p class="estimation__title">See How Much Gutter Guards Cost In The XX, XXX Area</p>
+                <div class="estimation__form" data-form-validate>
+                  <form class="formZipCode" action="#" method="POST">
+                    <p class="formZipCode__title">What is your ZIP Code?</p>
+                    <div class="formZipCode__input customInput customInput_label-visible customInput_focusShift customInput_bgLight js-focus-shift" data-validate-type="text" data-limitations="digit">
+                      <input id="zipCode" name="userZipCode" >
+                      <label for="zipCode"><span class="customInput__span">Enter ZIP Code</span></label>
+                      <div class="customInput__error">Error message</div>
+                    </div>
+                    <p class="formZipCode__secondaryText">Free, no-obligation estimates.</p>
+                    <button id="formEstimateBtn" class="formZipCode__btn button button_accented js-modal-estimate" type="submit">Get estimate</button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -189,7 +202,7 @@
                 <form class="formOwner" action="/" method="POST">
                   <div class="formOwner__step formOwner__step_1" data-step>
                     <div class="formOwner__title">
-                      <h2>Are you homeowner or authorized to make property changes?</h2>
+                      <h2 class="formOwner__titleLg">Are you homeowner or authorized to make property changes?</h2>
                     </div>
                     <div class="formOwner__options">
                       <button class="formOwner__option button button_bordered button_option" type="button">
@@ -212,8 +225,8 @@
                     <div class="modalEstimation__btnNext formOwner__btn button button_accented" data-next-step tabindex="0">Next</div>
                   </div>
                   <div class="formOwner__step formOwner__step_2 visuallyHidden" data-step>
-                    <div class="formOwner__title">
-                      <h2>Who should I prepare this estimate for?</h2>
+                    <div class="formOwner__title formOwner__title_mbLg">
+                      <h2 class="formOwner__titleLg">Who should I prepare this estimate for?</h2>
                       <div class="formOwner__comment">
                         <span>Your choice:&nbsp;</span>
                         <span class="formOwner__commentChoice js-previous-step-choice"></span>

@@ -43,12 +43,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 100%;
-    column-gap: 33px;
   }
 }
 
 .footer__listItem {
   margin-bottom: 12px;
+
+  @include vp-1024 {
+    &:not(:last-of-type) {
+      margin-right: 33px;
+    }
+  }
 }
 
 .footer__link {
