@@ -6,12 +6,12 @@ const nextStep = (target) => {
   const nextStepContainer = currentStepContainer.nextSibling.nextSibling;
   currentStepContainer.classList.add('visuallyHidden');
   nextStepContainer.classList.remove('visuallyHidden');
-  fillProgress();
+  fillProgress(nextStepContainer.getAttribute('data-step-id'));
 };
 
-const fillProgress = () => {
-  const progressBars = document.querySelector('[data-steps-bar]').children;
-  Array.from(progressBars).forEach((bar) => bar.classList.add('done'));
+const fillProgress = (stepId) => {
+  const progressBar = document.querySelector(`[data-steps-bar] [data-step-id-${stepId}]`);
+  progressBar.classList.add('done');
 };
 
 const isOwnerOptionSelected = () => {
@@ -23,7 +23,7 @@ const selectOwnerOption = (selectedOption) => {
     option.classList.remove('selected');
   });
   selectedOption.classList.add('selected');
-  const result = selectedOption.querySelector('span.text');
+  const result = selectedOption.querySelector('label');
   document.querySelector('.js-previous-step-choice').textContent = result.textContent;
 };
 

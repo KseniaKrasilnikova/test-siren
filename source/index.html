@@ -195,36 +195,28 @@
         <div class="modal__content">
           <div class="modalEstimation" data-validate>
             <div class="modalEstimation__progressBar progressBar" data-steps-bar>
-              <span class="progressBar__block done"></span>
-              <span class="progressBar__block"></span>
+              <span class="progressBar__block done" data-step-id-1></span>
+              <span class="progressBar__block" data-step-id-2></span>
             </div>
               <div class="container" data-form-validate data-callback="finish">
                 <form class="formOwner" action="/" method="POST">
-                  <div class="formOwner__step formOwner__step_1" data-step>
+                  <div class="formOwner__step formOwner__step_1" data-step data-step-id="1">
                     <div class="formOwner__title">
                       <h2 class="formOwner__titleLg">Are you homeowner or authorized to make property changes?</h2>
                     </div>
                     <div class="formOwner__options">
-                      <button class="formOwner__option button button_bordered button_option" type="button">
-                        <span class="icon">
-                          <svg width="40" height="40" aria-hidden="true">
-                            <use xlink:href="#icon-check-true"></use>
-                          </svg>
-                        </span>
-                        <span class="text">Yes</span>
-                      </button>
-                      <button class="formOwner__option button button_bordered button_option" type="button">
-                        <span class="icon">
-                          <svg width="40" height="40" aria-hidden="true">
-                            <use xlink:href="#icon-check-false"></use>
-                          </svg>
-                        </span>
-                        <span class="text">No</span>
-                      </button>
+                      <div class="formOwner__option customRadio customRadio_checked">
+                        <input class="customRadio__input" type="radio" id="radio-yes" name="radioYes">
+                        <label class="customRadio__label customRadio__label_true" for="radio-yes">Yes</label>
+                      </div>
+                      <div class="formOwner__option customRadio customRadio_checked">
+                        <input class="customRadio__input" type="radio" id="radio-no" name="radioNo">
+                        <label class="customRadio__label customRadio__label_false" for="radio-no">No</label>
+                      </div>
                     </div>
-                    <div class="modalEstimation__btnNext formOwner__btn button button_accented" data-next-step tabindex="0">Next</div>
+                    <button type="submit" class="modalEstimation__btnNext formOwner__btn button button_accented" data-next-step tabindex="0">Next</button>
                   </div>
-                  <div class="formOwner__step formOwner__step_2 visuallyHidden" data-step>
+                  <div class="formOwner__step formOwner__step_2 visuallyHidden" data-step data-step-id="2">
                     <div class="formOwner__title formOwner__title_mbLg">
                       <h2 class="formOwner__titleLg">Who should I prepare this estimate for?</h2>
                       <div class="formOwner__comment">

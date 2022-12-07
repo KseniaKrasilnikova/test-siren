@@ -16,6 +16,8 @@
   color: $color-nero;
 
   @include vp-1024 {
+    margin-bottom: 4px;
+
     font-size: 25px;
     line-height: 36px;
   }
@@ -28,11 +30,15 @@
   margin-bottom: 10px;
 
   @include vp-1024 {
-    margin-bottom: 24px;
+    margin-bottom: 19px;
   }
 
   &_mbLg {
     margin-bottom: 16px;
+
+    @include vp-1024 {
+      margin-bottom: 24px;
+    }
   }
 }
 
@@ -53,7 +59,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 }
 

@@ -1,4 +1,5 @@
 import {Modals} from './modals';
+import {resetFormSteps} from './init-form-steps';
 
 let modals;
 
@@ -22,6 +23,9 @@ const settings = {
     eventTimeout: 400,
     openCallback: false,
     closeCallback: false,
+  },
+  'estimation': {
+    closeCallback: () => resetFormSteps(),
   },
 };
 
